@@ -10,8 +10,8 @@
             <div class="card-body">
                 <h3>{{ photo.filename }}</h3>
                 <p>{{ photo.description }}</p>
-                <a href="{{ url_for('static', filename=photo) }}" class="btn-d">Download</a>
             </div>
+            <a href="{{ url_for('static', filename=photo) }}" download="{{ url_for('static', filename=photo) }}" class="btn-d">Download</a>
         </div>
         
         <!-- <div class="loader"></div>  -->
