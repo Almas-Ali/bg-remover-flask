@@ -1,0 +1,5 @@
+env/
+__pycache__
+static/media/*
+static/robots.txt
+sqlite.db

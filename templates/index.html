@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<div class="container">
+
+  <div class="home">
+
+    <div class="title">
+      <h1>PhotoMagic</h1>
+      <p>
+        PhotoMagic is a photo background removal service. We remove the background from your photos and make them
+        transparent.
+      </p>
+    </div>
+
+    <div id="file">
+      <form action="/upload" method="POST" enctype="multipart/form-data" class="card">
+        <input type="file" name="file">
+        <input type="submit" value="Upload" class="btn">
+      </form>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

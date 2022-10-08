@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}Photos{% endblock %}
+{% block content %}
+
+<div class="container">
+    <!-- display photos as gallery app here -->
+    <div class="gallery">
+        {% for photo in photos %}
+        <div class="card">
+            <img src="{{ url_for('static', filename=photo.path) }}" alt="{{ photo.name }}">
+            <div class="card-body">
+                <h3>{{ photo.filename }}</h3>
+                <p>{{ photo.description }}</p>
+                <a href="{{ url_for('static', filename=photo.path) }}" download="{{ url_for('static', filename=photo.path) }}" class="btn-d">View</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
